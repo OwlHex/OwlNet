@@ -1,0 +1,123 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.title {
+    font-size: 84px;
+}
+
+/*     LINKS    */
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a:hover, a:active {
+   color: #000000;
+}
+
+/*    POSITION   */
+.content {
+    text-align: center;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+.vrticalSpace{
+    margin-top: 50px;
+}
+.ground{
+    position:absolute;
+    width:300px;
+    height:20px;
+    margin-left:-150px;
+    /*background:#063;*/
+    bottom:0px;
+    left:50%;
+
+}
+
+/*     BUTTON    */
+
+.buttonViwe{
+    background-color: #948752;
+    border: none;
+    color: white;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 50px;
+    font-size: 16px;
+
+}
+
+
+/*    SELECT   */
+
+.select-style {
+    border: 1px solid #ccc;
+    width: 80px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+
+/*      IMAGE     */
+
+.imageConstruct {
+    border: 1px solid #cc88aa;
+    border-radius: 4px;
+    padding: 5px;
+    height: 320px;
+    /*width: 150px;*/
+}
+
+img:hover {
+    box-shadow: 0 0 3px 1px rgba(220, 160, 200, 0.5);
+}
