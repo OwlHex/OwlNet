@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function () {return view('welcome');});
+//Route::get('/', function () {return view('welcome');});
 
-
+Route::get('/', ['as'=>'/', 'uses'=>'UserAuthController@home']);
+Route::get('/logout', ['as'=>'logout', 'uses'=>'UserAuthController@logout']);
 Route::get('/SignIn', ['as'=>'SignIn', 'uses'=>'UserAuthController@SignIn']);
-Route::get('/SignUp', ['as'=>'SignUp', 'uses'=>'UserAuthController@SignUp']);
+Route::get('/Registration', ['as'=>'Registration', 'uses'=>'UserAuthController@Registration']);
+Route::get('/News', ['as'=>'News', 'uses'=>'UserAuthController@News']);
+
 
 

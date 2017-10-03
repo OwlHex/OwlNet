@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 
 class UserAuthController extends Controller
 {
+    public function home ()
+    {
+        if (view()->exists('welcome')) {
+            return view('welcome');
+        }
+        abort(404);
+
+    }
     public function SignIn ()
     {
         if (view()->exists('Signin')) {
