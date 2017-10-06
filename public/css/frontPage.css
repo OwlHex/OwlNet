@@ -13,7 +13,7 @@ html, body {
 }
 
 .leftcolumn, .rightcolumn {
-    min-height: 750px;
+    min-height: auto;
 
 }
 .leftcolumn {
@@ -65,7 +65,9 @@ a:hover, a:active {
     display: table;
     margin:  auto;
 }
-
+.margin-left{
+    margin-left: 10px;
+}
 .position-ref {
     position: relative;
 }
@@ -74,6 +76,9 @@ a:hover, a:active {
     position: absolute;
     right: 10px;
     top: 18px;
+}
+.top-margin-hard{
+    margin-top: 20px;
 }
 
 .m-b-md {
@@ -95,6 +100,9 @@ a:hover, a:active {
     float: right;
 }
 
+.right-margin{
+    margin-right: 20px;
+}
 /*     BUTTON    */
 
 .buttonViwe{
@@ -152,6 +160,12 @@ a:hover, a:active {
     /*border-radius: 4px;*/
     height: 70px;
     width: 70px;
+}
+.imageGallery{
+    padding: 10px;
+    height: 150px;
+    width: 150px;
+
 }
 
 img:hover {
@@ -272,7 +286,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .text-box:hover {
     color: #ffffff;
 }
-.tegs{
+.R_block{
     /*position: absolute;*/
     padding: 5px;
     width: auto;
@@ -294,4 +308,50 @@ input[type="search"]::-webkit-search-results-decoration {
     letter-spacing: .1rem;
     text-decoration: none;
 
+}
+
+.gallery-block{
+    /*padding: 15px;*/
+    width: 700px;
+    /*height: 30px;*/
+    display: block;
+    background: #8899aa;
+    /*bottom: 0;*/
+
+}
+
+
+.modal-content {
+    z-index: 1;
+
+    /*margin: auto;*/
+    /*background-color: #fff;*/
+    /*position: fixed;*/
+    /*display: block;*/
+
+
+}
+    
+
+.gallery-zoom{
+    z-index: 1;
+    /*position: fixed;*/
+    height: 700px;
+    width: auto;
+
+    /*display: block;*/
+    /*margin-right: 50%;*/
+    margin-left: 40%;
+    /*margin-bottom: 60%;*/
+    /*margin-top: 50%;*/
+
+    /*width: 1000px;*/
+    /*height: 1000px;*/
+    
+}
+
+
+.avatarEdit{
+    display: block;
+    background-color: #8899aa;
 }

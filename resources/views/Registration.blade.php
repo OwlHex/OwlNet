@@ -1,21 +1,9 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('welcome')
 
-    <title>Signin</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/frontPage.css">
-</head>
-<body>
-<div class="flex-center position-ref full-height">
-    <div class="content">
+@section('Registration')
+    <div class="post post-box">
         <div class="title m-b-md">
-            SignUp
+            Registration
         </div>
 
         <div class="links">
@@ -60,11 +48,7 @@
 
         <button type="submit" value="submit" class="buttonViwe">(#>,<#)</button>
 
-            <div class="links ground">
-                <a href="{{ url('/') }}"class="links">Home</a>
 
-            </div>
     </div>
-</div>
-</body>
-</html>
+
+@endsection

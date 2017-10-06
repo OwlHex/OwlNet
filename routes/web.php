@@ -18,6 +18,8 @@ Route::get('/logout', ['as'=>'logout', 'uses'=>'UserAuthController@logout']);
 Route::get('/SignIn', ['as'=>'SignIn', 'uses'=>'UserAuthController@SignIn']);
 Route::get('/Registration', ['as'=>'Registration', 'uses'=>'UserAuthController@Registration']);
 Route::get('/News', ['as'=>'News', 'uses'=>'UserAuthController@News']);
+Route::get('/gallery', ['as'=>'gallery', 'uses'=>'UserAuthController@gallery']);
+Route::get('/avatarEdit', ['as'=>'avatarEdit', 'uses'=>'FilleLoadController@avatarEdit']);
 
 
 
