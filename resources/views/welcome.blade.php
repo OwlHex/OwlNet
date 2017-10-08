@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script>
 
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="js/main.js"></script>

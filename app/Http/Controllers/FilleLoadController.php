@@ -9,25 +9,26 @@ use App\filleLoad;
 
 class FilleLoadController extends Controller
 {
-    
-    public function avatarEdit(){
-        // $avatar = DB::select("SELECT * FROM `avatar`");
-//        dd($products);
+
+    public function testing(Request $request) {
 
         if (view()->exists('avatarEdit')) {
             return view('avatarEdit');
             // return view('avatarEdit')->with('avatarEdit', $avatar);
         }
         abort(404);
-    }
 
-    public function edit(Request $request)
-    {
-        $avatar = new Product();
-        $result = $product->editProduct($request);
-        if (view()->exists('avatarEdit')) {
-            return response()->json($result);
+
+        if(Input::file())
+        {
+            $file = $request->file()["file"][0];
+            // dd($file);
+
+            $imageName = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('img'), $imageName);
+            $this->image = $imageName;
+            $this->save();
         }
-
     }
+
 }
