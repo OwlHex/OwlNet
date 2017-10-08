@@ -33,5 +33,6 @@ class Login
     {
         $this->user = $user;
         $this->remember = $remember;
+        
     }
 }

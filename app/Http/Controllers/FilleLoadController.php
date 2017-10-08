@@ -22,7 +22,7 @@ class FilleLoadController extends Controller
         if(Input::file())
         {
             $file = $request->file()["file"][0];
-            // dd($file);
+            
 
             $imageName = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('img'), $imageName);

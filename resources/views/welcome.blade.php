@@ -17,8 +17,8 @@
                 <div class="links top-margin text-regular ">
                     <a href="{{ url('/') }}">OwlNet</a>
                     <a href="{{ route('logout') }}">logout</a>
-                    <a href="{{ route('SignIn') }}">login</a>
-                    <a href="{{ route('Registration') }}">registration</a>
+                    
+                    <a href="{{ route('register') }}">registration</a>
                     <a href="{{ route('News') }}">news</a>
                     <a href="{{ route('gallery') }}">gallery</a>
                     
@@ -26,6 +26,34 @@
                 </div>
             </div>
 
+        </div>
+        <!-- auth laravel -->
+        <!-- https://laravel-news.com/authorization-gates -->
+        <!-- https://scotch.io/tutorials/user-authorization-in-laravel-54-with-spatie-laravel-permission -->
+
+     <!--    public function boot(Guard $auth)
+            {
+                dd($auth->user()); // null
+    
+                    view()->composer('partials.nav', function($view) use ($auth){
+                    dd($auth->user()); // returns User object
+                    $view->with('currentUser', $auth->user()); // does what you expect
+                });
+            } -->
+            <!-- Auth::user()->id -->
+            <!-- https://www.youtube.com/watch?v=3GwUarZmnOI&list=PLZU0qJlzY07WNbXipe1R8lUI-QLhGzwnt&t=231 -->
+
+        <div>
+            @if (Route::has('login'))
+                    <div class="top-right links">
+                        @auth
+                            <a href="{{ url('/home') }}">Home</a>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
+                            <a href="{{ route('register') }}">Register</a>
+                        @endauth
+                    </div>
+                @endif
         </div>
         <!-- main -->
         <div class="wrapper ">

@@ -17,8 +17,8 @@
                 <div class="links top-margin text-regular ">
                     <a href="<?php echo e(url('/')); ?>">OwlNet</a>
                     <a href="<?php echo e(route('logout')); ?>">logout</a>
-                    <a href="<?php echo e(route('SignIn')); ?>">login</a>
-                    <a href="<?php echo e(route('Registration')); ?>">registration</a>
+                    
+                    <a href="<?php echo e(route('register')); ?>">registration</a>
                     <a href="<?php echo e(route('News')); ?>">news</a>
                     <a href="<?php echo e(route('gallery')); ?>">gallery</a>
                     
@@ -26,6 +26,33 @@
                 </div>
             </div>
 
+        </div>
+        <!-- auth laravel -->
+        <!-- https://laravel-news.com/authorization-gates -->
+        <!-- https://scotch.io/tutorials/user-authorization-in-laravel-54-with-spatie-laravel-permission -->
+
+     <!--    public function boot(Guard $auth)
+            {
+                dd($auth->user()); // null
+    
+                    view()->composer('partials.nav', function($view) use ($auth){
+                    dd($auth->user()); // returns User object
+                    $view->with('currentUser', $auth->user()); // does what you expect
+                });
+            } -->
+            <!-- Auth::user()->id -->
+
+        <div>
+            <?php if(Route::has('login')): ?>
+                    <div class="top-right links">
+                        <?php if(auth()->guard()->check()): ?>
+                            <a href="<?php echo e(url('/home')); ?>">Home</a>
+                        <?php else: ?>
+                            <a href="<?php echo e(route('login')); ?>">Login</a>
+                            <a href="<?php echo e(route('register')); ?>">Register</a>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
         </div>
         <!-- main -->
         <div class="wrapper ">
