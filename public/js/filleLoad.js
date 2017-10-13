@@ -1,10 +1,19 @@
 $(document).ready(function () {
-    $('#uploadImage').on('submit', function (e) {
+    $('#addProduct').on('click', function (e) {
+        
         e.preventDefault();
-        var formData = new FormData($(this)[0]);
+
+        var formData = new FormData();   
+        formData.append('file', $('.upload-file')[0].files[0]);
+
+
+
+
+
         $.ajax({
+
             type: "POST",
-            url: '/product',
+            url: '/avatarEdit1',
             data: formData,
             async: true,
             cache: false,
@@ -12,11 +21,13 @@ $(document).ready(function () {
             processData: false,
             success: function (response) {
                 if (response.success) {
-                    $('.user-block').find('#avatar').append(
+                    debugger;
+                    $('div.user-block').find('img').html(
                         
-                        '"<img src="img/' + response.product.image + '" alt="avatar" id="avatar" class="imageConstruct">"' 
+                        '<img src="img/' + response.avatar + '" alt="avatar" id="avatar" class="imageConstruct">' 
                        
                     );
+                    // console.log(response.avatar);
                 } else if (response.error){
                     alert(response.message);
                 } else {

@@ -11,21 +11,18 @@
 |
 */
 
-//Route::get('/', function () {return view('welcome');});
-
-Route::get('/', ['as'=>'/', 'uses'=>'UserAuthController@home']);
-Route::get('/logout', ['as'=>'logout', 'uses'=>'UserAuthController@logout']);
-// Route::get('/SignIn', ['as'=>'register', 'uses'=>'AuthController@register']);
-Route::get('/register', ['as'=>'register', 'uses'=>'RegisterController@create']);
-// Route::get('/login', ['as'=>'login', 'uses'=>'LoginController@create']);
-
+Route::get('/', ['as'=>'/', 'uses'=>'UserAuthController@home', 'middleware' => 'auth']);
 
 Route::get('/News', ['as'=>'News', 'uses'=>'UserAuthController@News']);
 Route::get('/gallery', ['as'=>'gallery', 'uses'=>'UserAuthController@gallery']);
-Route::any('/avatarEdit', ['as'=>'avatarEdit', 'uses'=>'FilleLoadController@testing']);
+// Route::any('/avatarEdit', ['as'=>'avatarEdit', 'uses'=>'FilleLoadController@testing']);
+Route::any('/avatarEdit1', ['as'=>'avatarEdit1', 'uses'=>'FilleLoadController@testing1']);
+// Route::post('/avatarEdit1', 'FilleLoadController@testing1');
 
 
 
 
 
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');

@@ -10,6 +10,7 @@ class UserAuthController extends Controller
     {
         if (view()->exists('welcome')) {
             return view('post');
+
            
         }
         abort(404);
@@ -33,30 +34,4 @@ class UserAuthController extends Controller
 
     }
     
-    public function logout ()
-    {
-        if (view()->exists('welcome')) {
-            return view('welcome');
-        }
-        abort(404);
-
-    }
-
-    public function SignIn ()
-    {
-        if (view()->exists('login')) {
-            return view('login');
-        }
-        abort(404);
-
-    }
-    public function Registration ()
-    {
-        if (view()->exists('Registration')) {
-            return view('Registration');
-        }
-        abort(404);
-
-    }
-
 }

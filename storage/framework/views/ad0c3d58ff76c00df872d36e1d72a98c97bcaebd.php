@@ -9,21 +9,26 @@
         <div class="floatbox ">
 
             <div class="text-box ">
-                Username
+                <?php echo e(isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email); ?>
+
             </div>
             <div class="text-box">
-                first name
+                <?php echo e(isset(Auth::user()->id) ? Auth::user()->first_name :  Auth::user()->id); ?>
+
             </div>
             <div class="text-box">
-                last name
+                <?php echo e(isset(Auth::user()->id) ? Auth::user()->last_name :  Auth::user()->id); ?>
+
             </div>
             <div class="text-box">
-                age
+                <?php echo e(isset(Auth::user()->id) ? Auth::user()->age :  Auth::user()->id); ?>
+
             </div>
             <div class="text-box">
-                gender
+                <?php echo e(isset(Auth::user()->id) ? Auth::user()->gender :  Auth::user()->id); ?>
+
             </div>
-            <a href="<?php echo e(route('avatarEdit')); ?>">edit</a>
+            <a href="<?php echo e(route('avatarEdit1')); ?>">edit</a>
         </div>
     </div>
 

@@ -6,6 +6,8 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
+
+
 // // Change style of navbar on scroll
 // window.onscroll = function() {myFunction()};
 // function myFunction() {

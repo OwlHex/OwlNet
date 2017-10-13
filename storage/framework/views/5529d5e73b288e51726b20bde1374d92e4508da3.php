@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>OWL</title>
+        <title><?php echo e(isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email); ?></title>
         <link rel="stylesheet" href="css/frontPage.css">
     </head>
     <body>
@@ -16,9 +16,10 @@
             <div class="menu main-center">
                 <div class="links top-margin text-regular ">
                     <a href="<?php echo e(url('/')); ?>">OwlNet</a>
-                    <a href="<?php echo e(route('logout')); ?>">logout</a>
                     
-                    <a href="<?php echo e(route('register')); ?>">registration</a>
+                    
+                    
+                    
                     <a href="<?php echo e(route('News')); ?>">news</a>
                     <a href="<?php echo e(route('gallery')); ?>">gallery</a>
                     
@@ -41,19 +42,22 @@
                 });
             } -->
             <!-- Auth::user()->id -->
+            <!-- https://www.youtube.com/watch?v=3GwUarZmnOI&list=PLZU0qJlzY07WNbXipe1R8lUI-QLhGzwnt&t=231 -->
 
-        <div>
-            <?php if(Route::has('login')): ?>
-                    <div class="top-right links">
-                        <?php if(auth()->guard()->check()): ?>
-                            <a href="<?php echo e(url('/home')); ?>">Home</a>
-                        <?php else: ?>
-                            <a href="<?php echo e(route('login')); ?>">Login</a>
-                            <a href="<?php echo e(route('register')); ?>">Register</a>
-                        <?php endif; ?>
-                    </div>
-                <?php endif; ?>
-        </div>
+            <!-- gender first name last name age role -->
+
+        
+            
+                    
+                        
+                            
+                        
+                            
+                            
+                        
+                    
+                
+        
         <!-- main -->
         <div class="wrapper ">
             <div class="main-center">
@@ -68,7 +72,7 @@
             <?php echo $__env->yieldContent('post'); ?>
             <?php echo $__env->yieldContent('news'); ?> 
             <?php echo $__env->yieldContent('Registration'); ?>
-            <?php echo $__env->yieldContent('login'); ?>
+            
             <?php echo $__env->yieldContent('avatar_edit'); ?>
 
                                       
@@ -77,10 +81,11 @@
             </div>
         </div>
 
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script>
+        <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script> -->
 
-        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/filleLoad.js"></script>
+        <script src="js/editProfile.js"></script>
     </body>
 </html>

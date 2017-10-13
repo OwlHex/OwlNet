@@ -1,6 +1,9 @@
 @extends('welcome')
 
 @section('Registration')
+
+
+
     <div class="post post-box">
         <div class="title m-b-md">
             Registration

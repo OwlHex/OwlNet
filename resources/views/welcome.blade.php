@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>OWL</title>
+        <title>{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</title>
         <link rel="stylesheet" href="css/frontPage.css">
     </head>
     <body>
@@ -16,9 +16,10 @@
             <div class="menu main-center">
                 <div class="links top-margin text-regular ">
                     <a href="{{ url('/') }}">OwlNet</a>
-                    <a href="{{ route('logout') }}">logout</a>
+                    {{--<a href="{{ route('logout') }}">logout</a>--}}
+                    {{--<a href="{{ route('avatarEdit') }}">avatarEdit</a>--}}
                     
-                    <a href="{{ route('register') }}">registration</a>
+                    {{--<a href="{{ route('register') }}">registration</a>--}}
                     <a href="{{ route('News') }}">news</a>
                     <a href="{{ route('gallery') }}">gallery</a>
                     
@@ -43,18 +44,20 @@
             <!-- Auth::user()->id -->
             <!-- https://www.youtube.com/watch?v=3GwUarZmnOI&list=PLZU0qJlzY07WNbXipe1R8lUI-QLhGzwnt&t=231 -->
 
-        <div>
-            @if (Route::has('login'))
-                    <div class="top-right links">
-                        @auth
-                            <a href="{{ url('/home') }}">Home</a>
-                        @else
-                            <a href="{{ route('login') }}">Login</a>
-                            <a href="{{ route('register') }}">Register</a>
-                        @endauth
-                    </div>
-                @endif
-        </div>
+            <!-- gender first name last name age role -->
+
+        {{--<div>--}}
+            {{--@if (Route::has('login'))--}}
+                    {{--<div class="top-right links">--}}
+                        {{--@auth--}}
+                            {{--<a href="{{ url('/home') }}">Home</a>--}}
+                        {{--@else--}}
+                            {{--<a href="{{ route('login') }}">Login</a>--}}
+                            {{--<a href="{{ route('register') }}">Register</a>--}}
+                        {{--@endauth--}}
+                    {{--</div>--}}
+                {{--@endif--}}
+        {{--</div>--}}
         <!-- main -->
         <div class="wrapper ">
             <div class="main-center">
@@ -69,7 +72,7 @@
             @yield('post')
             @yield('news') 
             @yield('Registration')
-            @yield('login')
+            {{--@yield('login')--}}
             @yield('avatar_edit')
 
                                       
@@ -78,10 +81,11 @@
             </div>
         </div>
 
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script>
+        <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script> -->
 
-        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/filleLoad.js"></script>
+        <script src="js/editProfile.js"></script>
     </body>
 </html>

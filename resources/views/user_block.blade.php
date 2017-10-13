@@ -9,21 +9,21 @@
         <div class="floatbox ">
 
             <div class="text-box ">
-                Username
+                {{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}
             </div>
             <div class="text-box">
-                first name
+                {{{ isset(Auth::user()->id) ? Auth::user()->first_name :  Auth::user()->id}}}
             </div>
             <div class="text-box">
-                last name
+                {{{ isset(Auth::user()->id) ? Auth::user()->last_name :  Auth::user()->id}}}
             </div>
             <div class="text-box">
-                age
+                {{{ isset(Auth::user()->id) ? Auth::user()->age :  Auth::user()->id}}}
             </div>
             <div class="text-box">
-                gender
+                {{{ isset(Auth::user()->id) ? Auth::user()->gender :  Auth::user()->id}}}
             </div>
-            <a href="{{ route('avatarEdit') }}">edit</a>
+            <a href="{{ route('avatarEdit1') }}">edit</a>
         </div>
     </div>
 

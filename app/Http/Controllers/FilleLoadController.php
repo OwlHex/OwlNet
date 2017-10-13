@@ -9,26 +9,36 @@ use App\filleLoad;
 
 class FilleLoadController extends Controller
 {
+    
 
-    public function testing(Request $request) {
 
+    public function testing1(Request $request){
+
+        
+
+        
+
+    
+
+        $avatar = new filleLoad();
+        $result = $avatar->editProfile($request);
         if (view()->exists('avatarEdit')) {
             return view('avatarEdit');
-            // return view('avatarEdit')->with('avatarEdit', $avatar);
-        }
-        abort(404);
-
-
-        if(Input::file())
-        {
-            $file = $request->file()["file"][0];
             
-
-            $imageName = time() . '_' . $file->getClientOriginalName();
-            $file->move(public_path('img'), $imageName);
-            $this->image = $imageName;
-            $this->save();
         }
-    }
+        return response()->json($result);
 
+
+
+        $firstName = $_POST['firstname'];
+        $lastName = $_POST['lastname'];
+        $gender = $_POST['gender'];
+
+        $user = Auth::user()->select('name')->get();
+
+        DB::table('users')->where('name', $user )->insert(
+        array('first_name' => "$firstName", 'last_name' => "$lastName",'gender' => "$gender"));
+        
+        
+    }
 }
