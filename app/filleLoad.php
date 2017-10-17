@@ -25,26 +25,17 @@ class filleLoad extends Model
     public function editProfile( $request)
     {
 
-        
-        $firstName =$_POST["firstname"];
-        $lastName =$_POST["lastname"];
-        $gender = $_POST["gender"];
-
-        $user = Auth::user()->select('name')->get();
-        // dd($user);
-        // $DBUserInsert  = DB::select("SELECT * FROM `users`");
-        // $usertest = DB::table('users')->distinct()->select('name',$user)->get();
-        // echo $usertest->name;
-
-        DB::table('users')->where('name', $user )->insert(
-           array('first_name' => "$firstName", 'last_name' => "$lastName",'gender' => "$gender"));
-
-        
-
-
-
-
         try {
+
+
+            $this->firstname = $request->input('first_name');
+            $this->lastname = $request->input('last_name');
+            $this->gender = $request->input('gender');
+            $user =  Auth::id();
+            
+            DB::table('users')->where('id', $user )->update(array('first_name' => $this->firstname, 'last_name' => $this->lastname,'gender' => $this->gender));
+
+            
 
             $isUpdatedFile = ($request->file() && $request->file()["file"]) || false;
 
@@ -64,10 +55,5 @@ class filleLoad extends Model
         }
 
         return $response;
-
-
-
-       
-
     }
 }

@@ -16,7 +16,7 @@
             <div class="menu main-center">
                 <div class="links top-margin text-regular ">
                     <a href="{{ url('/') }}">OwlNet</a>
-                    {{--<a href="{{ route('logout') }}">logout</a>--}}
+                    <a href="{{ route('logout') }}">logout</a>
                     {{--<a href="{{ route('avatarEdit') }}">avatarEdit</a>--}}
                     
                     {{--<a href="{{ route('register') }}">registration</a>--}}

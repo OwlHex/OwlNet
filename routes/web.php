@@ -17,6 +17,7 @@ Route::get('/News', ['as'=>'News', 'uses'=>'UserAuthController@News']);
 Route::get('/gallery', ['as'=>'gallery', 'uses'=>'UserAuthController@gallery']);
 // Route::any('/avatarEdit', ['as'=>'avatarEdit', 'uses'=>'FilleLoadController@testing']);
 Route::any('/avatarEdit1', ['as'=>'avatarEdit1', 'uses'=>'FilleLoadController@testing1']);
+// Route::any('/infoEdit', ['as'=>'infoEdit', 'uses'=>'FilleLoadController@infoEdit']);
 // Route::post('/avatarEdit1', 'FilleLoadController@testing1');
 
 

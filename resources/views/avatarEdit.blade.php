@@ -8,11 +8,11 @@
 	        <button id="addProduct" type="submit">upload image</button>
         </div>
 
-    <form id="editProfile">   
+    <form  id="editProfile">   
         
         <div class="moon">
-        	<input type="text" placeholder="firstname" id="first_name">
-        	<input type="text" placeholder="lastname" id="last_name">
+        	<input type="text" name="first_name" placeholder="firstname" id="first_name">
+        	<input type="text" name="last_name" placeholder="lastname" id="last_name">
         	<div>
         		<input type="radio" name="gender" value="male"> Male<br>
   				<input type="radio" name="gender" value="female"> Female<br>

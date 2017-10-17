@@ -16,7 +16,7 @@
             <div class="menu main-center">
                 <div class="links top-margin text-regular ">
                     <a href="<?php echo e(url('/')); ?>">OwlNet</a>
-                    
+                    <a href="<?php echo e(route('logout')); ?>">logout</a>
                     
                     
                     
